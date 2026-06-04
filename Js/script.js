@@ -38,14 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
     /* =========================
        2. ACTIVE NAV LINK
     ========================= */
-    const currentPath = window.location.pathname;
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     const navLinksList = document.querySelectorAll('.nav-links a');
 
     navLinksList.forEach(link => {
         const href = link.getAttribute('href');
-        const filename = currentPath.split('/').pop() || 'index.html';
 
-        if (filename === href) {
+        if (href === currentPath) {
             link.classList.add('active');
         } else {
             link.classList.remove('active');
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     faders.forEach(el => observer.observe(el));
 
     /* =========================
-       4. EMAILJS CONTACT FORM
+       4. EMAILJS CONTACT FORM (FIXED)
     ========================= */
 
     const contactForm = document.getElementById('contact-form');
@@ -78,10 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (contactForm) {
 
-        // Init EmailJS (ONLY ONCE)
+        // Init EmailJS ONCE
         emailjs.init('rzs91dagywGaa9--d');
 
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const btn = contactForm.querySelector('.submit-btn');
@@ -90,29 +89,38 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
             btn.disabled = true;
 
-            emailjs.send('service_yyjhm2i', 'template_0zcpmy8', {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            })
-            .then(() => {
+            try {
+                const response = await emailjs.send(
+                    'service_yyjhm2i',
+                    'template_0zcpmy8',
+                    {
+                        from_name: document.getElementById('name').value,
+                        from_email: document.getElementById('email').value,
+                        message: document.getElementById('message').value
+                    }
+                );
+
+                console.log("SUCCESS:", response);
+
                 formMessage.textContent = '✅ Message sent successfully!';
                 formMessage.className = 'form-message success';
-                contactForm.reset();
-            })
-            .catch((error) => {
-                console.log(error);
-                formMessage.textContent = '❌ Failed to send message. Try again.';
-                formMessage.className = 'form-message error';
-            })
-            .finally(() => {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
 
-                setTimeout(() => {
-                    formMessage.classList.add('hidden');
-                }, 5000);
-            });
+                contactForm.reset();
+
+            } catch (error) {
+                console.log("ERROR:", error);
+
+                formMessage.textContent = '❌ Something went wrong. Please try again!';
+                formMessage.className = 'form-message error';
+            }
+
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
         });
     }
+
 });
