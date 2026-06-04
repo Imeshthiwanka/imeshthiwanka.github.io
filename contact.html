@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imesh | Get In Touch</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact Imesh for web development projects, multimedia consulting, or collaboration opportunities.">
+    
+    <!-- Open Graph / Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Imesh | Get In Touch">
+    <meta property="og:description" content="Reach out to me for professional web and multimedia services.">
+
+    <link rel="stylesheet" href="Css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon-contact.png?v=1">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Imesh.</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main style="padding-top: var(--nav-height);">
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-spacing">
+            <div class="container">
+                <h2 class="section-title fade-in">Get In <span>Touch</span></h2>
+                <div class="contact-grid">
+                    <div class="contact-info fade-in">
+                        <p class="contact-desc">Got a project in mind, a question, or just want to say hello? Drop me a message or find me on my socials!</p>
+                        
+                        <div class="info-items">
+                            <div class="info-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:imeshthiwanka200325@gmail.com">imeshthiwanka200325@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <a href="tel:+94719656728">071 965 6728</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/imesh-thiwanka" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/Imeshthiwanka" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.facebook.com/imeshthiwanka.thiwanka" target="_blank" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://medium.com/@imeshthiwanka200325" target="_blank" class="social-icon" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper fade-in delay-1">
+                        <form id="contact-form" class="glass-panel">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn primary-btn submit-btn">Send Message</button>
+                            <div id="form-message" class="form-message hidden"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Decorative background orbs -->
+        <div class="footer-orb footer-orb-1"></div>
+        <div class="footer-orb footer-orb-2"></div>
+
+        <div class="container">
+            <!-- Main grid -->
+            <div class="footer-grid fade-in">
+                <div class="footer-brand">
+                    <h2 class="footer-logo">Imesh.</h2>
+                    <p class="footer-tagline">Building high-quality, fully responsive, and aesthetically pleasing web experiences — one pixel at a time.</p>
+                    <div class="footer-badge">
+                        <i class="fa-solid fa-circle" style="color: #10b981; font-size: 0.5rem;"></i>
+                        <span>Available for freelance</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-socials">
+                    <h3>Connect</h3>
+                    <div class="social-icons-footer">
+                        <a href="https://www.linkedin.com/in/imesh-thiwanka" target="_blank" class="social-icon" aria-label="LinkedIn" data-tooltip="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Imeshthiwanka" target="_blank" class="social-icon" aria-label="GitHub" data-tooltip="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://medium.com/@imeshthiwanka200325" target="_blank" class="social-icon" aria-label="Medium" data-tooltip="Medium"><i class="fa-brands fa-medium"></i></a>
+                        <a href="contact.html" class="social-icon" aria-label="Email" data-tooltip="Contact Me"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span>Imesh Thiwanka</span>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Js/script.js"></script>
+</body>
+</html>
