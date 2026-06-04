@@ -19,6 +19,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init("rzs91dagywGaa9--d");
+    </script>
+
+    <script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_yyjhm2i",
+        "template_0zcpmy8",
+        this
+    ).then(() => {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+    }, (error) => {
+        alert("Failed to send message. Try again.");
+        console.log(error);
+    });
+});
+</script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon-contact.png?v=1">
 </head>
