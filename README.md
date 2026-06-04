@@ -6,34 +6,33 @@ Welcome to my personal portfolio website.
 
 This portfolio showcases my:
 
-- Skills
-- Projects
-- Certifications
-- Achievements
-- Contact Information
+* Skills
+* Projects
+* Certifications
+* Achievements
+* Contact Information
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
+* HTML5
+* CSS3
+* JavaScript
 
 ## Features
 
-- Responsive design
-- Modern user interface
-- Project showcase
-- Downloadable CV
-- Contact section
+* Responsive design
+* Modern user interface
+* Project showcase
+* Downloadable CV
+* Contact section
 
 ## Live Website
 
-Add your GitHub Pages URL here:
-
-https://your-website-url
+https://imeshthiwanka.github.io/
 
 ## Author
 
 Imesh Thiwanka
 
 GitHub: https://github.com/Imeshthiwanka
+
