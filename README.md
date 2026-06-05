@@ -1,4 +1,4 @@
-# Imesh Thiwanka Portfolio
+# Imesh Thiwanka - Portfolio
 
 Welcome to my personal portfolio website.
 
